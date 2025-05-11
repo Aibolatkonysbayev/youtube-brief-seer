@@ -14,7 +14,7 @@ const VideoPreview: React.FC<VideoPreviewProps> = ({ videoId, title }) => {
   const [isLoading, setIsLoading] = useState(true);
 
   return (
-    <Card className="overflow-hidden bg-white/90 border-brand-200 shadow-lg transition-all duration-300 hover:shadow-xl">
+    <Card className="overflow-hidden bg-white/90 border-brand-200 shadow-lg transition-all duration-300 hover:shadow-xl animate-fade-in">
       <CardContent className="p-0">
         <div className="aspect-video w-full relative">
           {isLoading && (
@@ -33,7 +33,7 @@ const VideoPreview: React.FC<VideoPreviewProps> = ({ videoId, title }) => {
           />
         </div>
         {title && (
-          <div className="px-4 py-3">
+          <div className="px-4 py-3 animate-scale">
             <h3 className="font-medium text-lg line-clamp-2 text-brand-800">{title}</h3>
           </div>
         )}
